@@ -1,0 +1,88 @@
+.wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--app-bg);
+  color: var(--app-text);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.main {
+  flex: 1;
+  overflow: auto;
+  padding-bottom: 80px;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom)) 0;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+}
+
+[data-theme="dark"] .nav {
+  background: var(--app-card);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  color: var(--app-muted);
+  font-size: 0.7rem;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 52px;
+}
+
+.navItem:focus {
+  outline: none;
+}
+
+.navItemActive {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.navItemActive .navIcon {
+  color: #2563eb;
+}
+
+.navIcon {
+  font-size: 1.35rem;
+  color: inherit;
+}
+
+.badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  background: #2563eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navItem {
+  position: relative;
+}

@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    strictPort: true, // 5173 band bo'lsa boshqa portga o'tmaslik — tunnel 5173 ga ulanadi
     allowedHosts: ['.ngrok-free.dev', '.ngrok.io', '.ngrok-free.app', 'localhost'],
   },
 })

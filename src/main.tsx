@@ -2,6 +2,9 @@ import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 import { init, mockTelegramEnv } from '@telegram-apps/sdk-react'
 import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './contexts/ThemeContext'
+import { LangProvider } from './contexts/LangContext'
+import { CartProvider } from './contexts/CartContext'
 import App from './App'
 import './index.css'
 
@@ -12,6 +15,20 @@ declare global {
   }
 }
 if (typeof window !== 'undefined') {
+  const isTelegram = !!(window as Window & { Telegram?: { WebApp?: unknown } }).Telegram?.WebApp
+  if (isTelegram) {
+    document.documentElement.setAttribute('data-theme', 'light')
+    try {
+      (window as Window & { Telegram?: { WebApp?: { setBackgroundColor?: (c: string) => void } } }).Telegram?.WebApp?.setBackgroundColor?.('#f5f5f7')
+    } catch {
+      // ignore
+    }
+  } else {
+    const savedTheme = localStorage.getItem('app-theme')
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+      document.documentElement.setAttribute('data-theme', savedTheme)
+    }
+  }
   const hash = window.location.hash.slice(1)
   const params = new URLSearchParams(hash || undefined)
   if (!params.has('tgWebAppPlatform')) {
@@ -35,9 +52,15 @@ function Root() {
     }
   }, [])
   return (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <LangProvider>
+        <CartProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </CartProvider>
+      </LangProvider>
+    </ThemeProvider>
   )
 }
 

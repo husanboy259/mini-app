@@ -1,0 +1,189 @@
+.page {
+  padding: 24px 16px;
+  max-width: 100%;
+}
+
+.profileHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--app-muted);
+  margin: 8px 0 2px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.fullName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0 0 4px 0;
+}
+
+.username {
+  font-size: 0.9rem;
+  color: var(--app-muted);
+  margin: 0 0 4px 0;
+}
+
+.phone {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--app-text);
+  margin: 0 0 10px 0;
+}
+
+.phoneMuted {
+  font-size: 0.9rem;
+  color: var(--app-muted);
+  margin: 0 0 10px 0;
+}
+
+.phoneAddBtn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  background: transparent;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.phoneEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 4px;
+}
+
+.phoneInput {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--app-border);
+  border-radius: 10px;
+  background: var(--app-card);
+  color: var(--app-text);
+  box-sizing: border-box;
+}
+
+.phoneSaveBtn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card {
+  background: var(--app-card);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid var(--app-border);
+}
+
+[data-theme="dark"] .card {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.cardTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--app-muted);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.segmented {
+  display: flex;
+  gap: 8px;
+  background: var(--app-bg);
+  border-radius: 10px;
+  padding: 4px;
+  border: 1px solid var(--app-border);
+}
+
+.segBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--app-muted);
+  cursor: pointer;
+}
+
+.segBtnActive {
+  background: #2563eb;
+  color: #fff;
+}
+
+.linkRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--app-text);
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.linkRow:not(:last-child) {
+  border-bottom: 1px solid var(--app-border);
+}
+
+.linkIcon {
+  font-size: 1.3rem;
+  color: #2563eb;
+}
+
+.linkLabel {
+  flex: 1;
+  font-weight: 500;
+}
+
+.linkArrow {
+  color: var(--app-muted);
+  font-size: 1.1rem;
+}

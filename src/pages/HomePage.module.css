@@ -1,0 +1,259 @@
+.page {
+  padding: 20px 16px 24px;
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--app-muted);
+  margin: 0;
+}
+
+.langRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -36px;
+  margin-bottom: 8px;
+}
+
+.langSwitch {
+  display: flex;
+  background: var(--app-card);
+  border-radius: 10px;
+  padding: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border: 1px solid var(--app-border);
+}
+
+.langBtn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--app-muted);
+  cursor: pointer;
+}
+
+.langBtnActive {
+  background: #2563eb;
+  color: #fff;
+}
+
+.search {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  font-size: 1rem;
+  border: 1px solid var(--app-border);
+  border-radius: 12px;
+  background: var(--app-card);
+  color: var(--app-text);
+  margin-bottom: 24px;
+  box-sizing: border-box;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='%23999' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 14px center;
+}
+
+.search::placeholder {
+  color: var(--app-muted);
+}
+
+.reklamaSection {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.reklamaTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.reklamaDesc {
+  font-size: 0.85rem;
+  opacity: 0.95;
+  margin: 0 0 14px 0;
+}
+
+.reklamaCard {
+  flex: 0 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.reklamaCard:active {
+  transform: scale(0.98);
+}
+
+.reklamaEmoji {
+  font-size: 1.8rem;
+}
+
+.reklamaName {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0 0 12px 0;
+}
+
+.sectionHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0;
+}
+
+.sectionLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.scrollRow {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollRow::-webkit-scrollbar {
+  display: none;
+}
+
+.modelCard {
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 8px;
+  background: var(--app-card);
+  border-radius: 12px;
+  border: 1px solid var(--app-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.modelCard:active {
+  transform: scale(0.98);
+}
+
+.modelImg {
+  width: 56px;
+  height: 40px;
+  object-fit: contain;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.modelName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--app-text);
+  text-align: center;
+}
+
+.brandCard {
+  flex: 0 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--app-card);
+  border-radius: 12px;
+  border: 1px solid var(--app-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.brandCard:active {
+  transform: scale(0.98);
+}
+
+.brandLogo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.brandName {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.productCard {
+  background: var(--app-card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--app-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: pointer;
+}
+
+.productCard:active {
+  transform: scale(0.98);
+}
+
+.productImg {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.productName {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--app-text);
+}

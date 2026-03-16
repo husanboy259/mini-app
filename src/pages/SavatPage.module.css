@@ -1,0 +1,122 @@
+.page {
+  padding: 20px 16px 100px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0 0 20px 0;
+}
+
+.empty {
+  font-size: 1rem;
+  color: var(--app-muted);
+  margin: 0 0 20px 0;
+}
+
+.linkToCatalog {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.name {
+  flex: 1;
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.price {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--app-border);
+  background: var(--app-card);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.remove {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: var(--app-muted);
+  cursor: pointer;
+}
+
+.botHint {
+  font-size: 0.85rem;
+  color: var(--app-muted);
+  margin: 0 0 12px 0;
+  padding: 0 4px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 72px;
+  left: 0;
+  right: 0;
+  padding: 16px 20px 16px;
+  background: var(--app-card);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+  z-index: 50;
+}
+
+.total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--app-text);
+  margin: 0 0 12px 0;
+}
+
+.placeOrder {
+  width: 100%;
+  padding: 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.placeOrder:disabled {
+  opacity: 0.7;
+}
