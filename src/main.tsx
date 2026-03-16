@@ -8,18 +8,12 @@ import { CartProvider } from './contexts/CartContext'
 import App from './App'
 import './index.css'
 
-// Launch params yo'q bo'lsa (brauzer yoki Telegram hash siz) — mock qilamiz, init() xato bermasin
-declare global {
-  interface Window {
-    Telegram?: { WebApp?: { initData?: string } }
-  }
-}
 if (typeof window !== 'undefined') {
-  const isTelegram = !!(window as Window & { Telegram?: { WebApp?: unknown } }).Telegram?.WebApp
+  const isTelegram = !!window.Telegram?.WebApp
   if (isTelegram) {
     document.documentElement.setAttribute('data-theme', 'light')
     try {
-      (window as Window & { Telegram?: { WebApp?: { setBackgroundColor?: (c: string) => void } } }).Telegram?.WebApp?.setBackgroundColor?.('#f5f5f7')
+      window.Telegram?.WebApp?.setBackgroundColor?.('#f5f5f7')
     } catch {
       // ignore
     }
